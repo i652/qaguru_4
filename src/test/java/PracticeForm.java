@@ -7,10 +7,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class PracticeForm {
     @Test
     void selenideFormTest() {
-        // Открыть demoqa
         open("https://demoqa.com/automation-practice-form");
-
-        // Ввести Selenide в поиск
         $("#firstName").setValue("First Name");
         $("#lastName").setValue("Last Name");
         $("#userEmail").setValue("name@example.com");
