@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.open;
@@ -12,7 +14,7 @@ public class PracticeForm {
         $("#lastName").setValue("Last Name");
         $("#userEmail").setValue("name@example.com");
         $(byText("Female")).click();
-        $("#userNumber").setValue("Mobile Number");
+        $("#userNumber").setValue("1234567890");
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select option[value='6']").click();
         sleep(1000);
@@ -35,7 +37,11 @@ public class PracticeForm {
         $(byText("Haryana")).click();
         $("#city").click();
         $(byText("Karnal")).click();
-        $(byText("Select picture")).click();
         sleep(1000);
+        File file = new File("IMG_4410.jpg");
+        $("#uploadPicture").uploadFile(file);
+        sleep(1000);
+        $(byText("Submit")).click();
+        sleep(3000);
     }
 }
