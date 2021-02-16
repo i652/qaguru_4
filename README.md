@@ -1,4 +1,3 @@
-# qaguru_4
-DemoQA Practice Form first edition
+# DemoQA Practice Form
 Форма DemoQA для практических занятий. Первое исправление.
 Простое исправление для второго коммита.
